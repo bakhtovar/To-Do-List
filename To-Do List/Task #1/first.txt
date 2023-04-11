@@ -1,0 +1,29 @@
+//
+//  first.cpp
+//  To-Do List
+//
+//  Created by Bakhtovar Umarov on 10/04/23.
+//
+
+//#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int task2 () {
+    
+    vector<int> n = {1,4,5,0,5,34,2,5,2,4,-2};
+
+    for(auto& i : n) {
+        if(i < 0) i = 0;
+    }
+
+    for(auto& i : n) {
+        cout << i;
+    }
+
+    cout << endl;
+    
+    return 0;
+}

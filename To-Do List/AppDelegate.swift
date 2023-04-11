@@ -11,8 +11,6 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -74,6 +72,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+    
+    
+    func isUserLoggedIn() -> Bool {
+        let context = persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<UserInfo>(entityName: "UserInfo")
+
+        do {
+            let users = try context.fetch(fetchRequest)
+            return !users.isEmpty
+        } catch {
+            print("Error fetching user from Core Data: \(error.localizedDescription)")
+            return false
         }
     }
 

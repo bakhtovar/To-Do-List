@@ -1,0 +1,29 @@
+//
+//  second.cpp
+//  To-Do List
+//
+//  Created by Bakhtovar Umarov on 10/04/23.
+//
+
+#include <stdio.h>
+#include <iostream>
+#include <vector>
+//#include <bits/stdc++.h>
+
+using namespace std;
+
+int main () {
+    
+    vector<int> n = {1,4,5,0,5,34,2,5,2,4,-2};
+
+    //sort(n.begin(), n.end(), greater<int>()); // возрастание
+    //sort(n.begin(), n.end());  // убывание
+
+    for(const auto& i : n) {
+        cout <<i << ", ";
+    }
+
+    cout << endl;
+
+    return 0;
+}

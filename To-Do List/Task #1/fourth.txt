@@ -1,0 +1,24 @@
+//
+//  fourth.cpp
+//  To-Do List
+//
+//  Created by Bakhtovar Umarov on 10/04/23.
+//
+
+#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <numeric>
+//#include <bits/stdc++.h>
+using namespace std;
+
+int main () {
+    
+    vector<int> n = {1,4,5,0,5,34,2,5,2,4,-2};
+
+    int sum = accumulate(n.begin(), n.end(), 0);
+
+    cout << sum << endl;
+  
+    return 0;
+}
